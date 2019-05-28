@@ -10,7 +10,7 @@
     
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
-
+<?php session_start() ?>
 <!--- Start Home Section-->
 <div id="home">
 
@@ -120,6 +120,7 @@
 <div id="course" class="offset">
         <div class="col-12 narrow text-center">
             <h1>INFORMASI ASET</h1>
+            <?php var_dump($_SESSION) ?>
             <p class="lead">Login untuk melihat data aset daerah Karangmalang</p>
             <!-- Button trigger modal -->
                 <button type="button" class="btn btn-secondary btn-md" data-toggle="modal" data-target="#exampleModal">
@@ -136,24 +137,24 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         </div>
-                        <div class="modal-body">
-                                <form>
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail1">Email address</label>
-                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="exampleInputPassword1">Password</label>
-                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                        </div>
-                                        <div class="form-group form-check">
-                                        </div>
-                                      </form>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Login</button>
-                        </div>
+                        <form method="post" action="login.php">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Login Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" placeholder="Enter username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
                     </div>
                     </div>
                 </div>
@@ -250,6 +251,13 @@
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    <?php if($_GET['login_error'] == true) { ?>
+        $(document).ready(function() {
+            alert("Login gagal. mohon cek username dan password");
+        });
+    <?php } ?>
+</script>
 
 </body>
 </html>

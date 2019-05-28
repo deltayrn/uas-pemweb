@@ -42,7 +42,7 @@
     <div id="informasi" class="offset">
         <div class="jumbotron container-fluid">
             <div class="col-12 text-center">
-                <h2 class="heading">personal property</h2>
+                <h2 class="heading">Pemilik Property</h2>
                 <div class="heading-underline"></div>
             </div>
             <div class="row">

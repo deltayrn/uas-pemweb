@@ -22,7 +22,7 @@ include "config.php";
                 <div class="col-lg-12">
  <h1> Registrasi Karyawan Baru </h1>
  
- <form method = 'POST' action = 'aksi_tambah.php'>
+ <form method = 'POST' action = 'aksi_tambah_pemilik.php'>
  <table border = '1' cellspacing = '1' cellpadding = '10'
  style = 'border : #aaa; color: #101; font-family : arial; fot-size : 12px;'>
  <tr>

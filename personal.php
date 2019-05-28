@@ -77,8 +77,8 @@
                                     echo "<td>".$row['alamat_pemilik']."</td>";
                                     echo "<td>".$row['no_hp']."</td>";
                                     echo "<td>";
-                                    echo "<a href='edit_produk.php?id_produk=".$row['id_produk']."'>Edit</a> | ";
-                                    echo "<a href='hapus_produk.php?id_produk=".$row['id_produk']."'>Hapus</a>";
+                                    echo "<a href='edit_pemilik.php?id_pemilik=".$row['id_pemilik']."'>Edit</a> | ";
+                                    echo "<a href='hapus_pemilik.php?id_pemilik=".$row['id_pemilik']."'>Hapus</a>";
                                     echo "</tr>";
                                      $i++; 
                                 }
@@ -86,7 +86,7 @@
                         ?>
                             <table >
                                 <tr>
-                                    <td><a href="tambah.php"> <button type="submit">Tambah Karyawan</button> </td> 
+                                    <td><a href="tambah_pemilik.php"> <button type="submit">Tambah Pemilik</button> </td> 
                                 </tr>
                             </table>
                       

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2019 at 06:16 PM
+-- Generation Time: May 29, 2019 at 12:10 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -87,7 +87,9 @@ INSERT INTO `pemilik` (`id_pemilik`, `nama_pemilik`, `alamat_pemilik`, `no_hp`) 
 (3, 'Badan Wakaf', 'Yogyakarta', '0274987987'),
 (4, 'Pemda Karangmalang', 'Karangmalang', '08123938633'),
 (5, 'Angelia Paragon', 'Sleman', '08767898292'),
-(6, 'Jenny Jennifer', 'Bantul', '082927263537');
+(6, 'Jenny Jennifer', 'Bantul', '082927263537'),
+(7, '', ' ', ''),
+(8, 'lelaa', ' Bantul', '01981817171');
 
 -- --------------------------------------------------------
 
@@ -167,13 +169,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `pemilik`
 --
 ALTER TABLE `pemilik`
-  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `property`
 --
 ALTER TABLE `property`
-  MODIFY `id_property` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_property` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

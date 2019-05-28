@@ -16,7 +16,7 @@
 
 <!--Navigation-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="img/aset.png"></a>
+    <a class="navbar-brand" href="index.php"><img src="img/aset.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -103,14 +103,14 @@
     </div>
     <div class="col-md-4">
         <div class="informasi">
-        <a href="./personal.html" target="_blank">
+        <a href="./personal.php" target="_blank">
             <img src="img/personal.png">
         </a>
         </div>
     </div>
     <div class="col-md-4">
         <div class="informasi">
-        <a href="./pemilik.html" target="_blank">
+        <a href="./pemilik.php" target="_blank">
             <img src="img/pemilik.png">
         </a>
         </div>
@@ -120,7 +120,6 @@
 <div id="course" class="offset">
         <div class="col-12 narrow text-center">
             <h1>INFORMASI ASET</h1>
-            <?php var_dump($_SESSION) ?>
             <p class="lead">Login untuk melihat data aset daerah Karangmalang</p>
             <!-- Button trigger modal -->
                 <button type="button" class="btn btn-secondary btn-md" data-toggle="modal" data-target="#exampleModal">
@@ -190,7 +189,7 @@
         <div class="card text-center">
             <img class="card-img-top" src="img/delta.jpg">
             <div class="card-body">
-                <h4>Delta Setyarini</h4>
+                <h4>Delta Setiyarini</h4>
                 <p>18520241027 </p>
             </div>
         </div>

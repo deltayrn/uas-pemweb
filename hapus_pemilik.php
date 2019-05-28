@@ -8,10 +8,10 @@ if (isset($_GET['id_pemilik'])) {
     $query = mysqli_query($db, $sql);
     // apakah query hapus berhasil?
     if ($query) {
-        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Berhasil Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Berhasil Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
     } else {
-        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Gagal Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Gagal Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
     }
 } else {
-    echo " <center> <b> <font color = 'red' size = '4'> <p> Data Gagal Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+    echo " <center> <b> <font color = 'red' size = '4'> <p> Data Gagal Dihapus </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
 }

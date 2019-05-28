@@ -21,11 +21,11 @@ if( isset($_POST['id_pemilik']) ){
     
     // apakah query hapus berhasil?
     if( $query ){
-        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Berhasil disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+        echo " <center> <b> <font color = 'red' size = '4'> <p> Data Berhasil disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
     } else {
-        echo " <center> <b> <font color = 'red' size = '4'> <p> Data gagal disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+        echo " <center> <b> <font color = 'red' size = '4'> <p> Data gagal disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
     }
 } else {
-    echo " <center> <b> <font color = 'red' size = '4'> <p> Data gagal disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=personal.php'/>  ";
+    echo " <center> <b> <font color = 'red' size = '4'> <p> Data gagal disimpan </p> </center> </b> </font> <br/> <meta http-equiv='refresh' content='2; url=pemilik.php'/>  ";
 }
 ?>

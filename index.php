@@ -96,7 +96,7 @@
 <div class="row no-padding">
     <div class="col-md-4">
         <div class="informasi">
-        <a href="./real.html" target="_blank">
+        <a href="./properti.php" target="_blank">
             <img src="img/real.png">
         </a>
         </div>

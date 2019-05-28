@@ -8,15 +8,6 @@
     <title>Informasi | Pemilik Aset</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css"> 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/navbar-fixed-top.css" rel="stylesheet">
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="css/business-casual.css" rel="stylesheet">
-    <link href="css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
 
@@ -56,17 +47,6 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>
-                        <?php if ($_SESSION['is_login']) {
-                            echo "Employees";
-                        } else {
-                            echo "Menu";
-                        } ?>
-                         in Mirae Japanesee Restaurant
-                        </strong>
-                    </h2>
-                    <body class="dt-example">
             <div class="demo-html"></div>
             <br>
             <table id="example" class="display" cellspacing="0" width="100%">
@@ -124,22 +104,24 @@
                                 echo "<td>".$row['nama_pemilik']."</td>";
                                 echo "<td>".$row['alamat_pemilik']."</td>";
                                 echo "<td>".$row['no_hp']."</td>";
+                                echo "<a href='edit_produk.php?id_produk=".$row['id_pemilik']."'>Edit</a> | ";
+                                echo "<a href='hapus_produk.php?id_produk=".$row['id_pemilik']."'>Hapus</a>";
+        
                                 echo "</tr>";
                             }
                         } 
                     ?>
+                    <table >
+                            <tr>
+                                <td><a href="tambah.php"> <button type="submit">Tambah Karyawan</button> </td> 
+                            </tr>
+                        </table>
                 </tbody>
                 <?php } ?>
             </table>
                 </div>
             </div>
         </div>
-        
-
-
-
-
-
 </div>
 <!--- End Personal property Section -->
 

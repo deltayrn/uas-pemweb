@@ -10,13 +10,13 @@
     
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
-
+<?php session_start() ?>
 <!--- Start Home Section-->
 <div id="home">
 
 <!--Navigation-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="index.html"><img src="img/aset.png"></a>
+    <a class="navbar-brand" href="index.php"><img src="img/aset.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -103,14 +103,14 @@
     </div>
     <div class="col-md-4">
         <div class="informasi">
-        <a href="./personal.html" target="_blank">
+        <a href="./personal.php" target="_blank">
             <img src="img/personal.png">
         </a>
         </div>
     </div>
     <div class="col-md-4">
         <div class="informasi">
-        <a href="./pemilik.html" target="_blank">
+        <a href="./pemilik.php" target="_blank">
             <img src="img/pemilik.png">
         </a>
         </div>
@@ -136,24 +136,24 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         </div>
-                        <div class="modal-body">
-                                <form>
-                                        <div class="form-group">
-                                          <label for="exampleInputEmail1">Email address</label>
-                                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="exampleInputPassword1">Password</label>
-                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                        </div>
-                                        <div class="form-group form-check">
-                                        </div>
-                                      </form>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Login</button>
-                        </div>
+                        <form method="post" action="login.php">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Login Name</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" placeholder="Enter username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+                                </div>
+                                <div class="form-group form-check">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </form>
                     </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
 
 <div class="row padding">
 
-    <div class="col-3">
+    <div class="col-2">
         <div class="card text-center">
             <img class="card-img-top" src="img/abid.jpg">
             <div class="card-body">
@@ -185,17 +185,17 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-2">
         <div class="card text-center">
             <img class="card-img-top" src="img/delta.jpg">
             <div class="card-body">
-                <h4>Delta Setyarini</h4>
+                <h4>Delta Setiyarini</h4>
                 <p>18520241027 </p>
             </div>
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-2">
         <div class="card text-center">
             <img class="card-img-top" src="img/fira.jpeg">
             <div class="card-body">
@@ -205,7 +205,7 @@
         </div>
     </div>
 
-    <div class="col-3">
+    <div class="col-2">
         <div class="card text-center">
             <img class="card-img-top" src="img/nada.jpg">
             <div class="card-body">
@@ -214,7 +214,7 @@
             </div>
         </div>
     </div>
-    <div class="col-3">
+    <div class="col-2">
         <div class="card text-center">
             <img class="card-img-top" src="img/yogi.JPG">
             <div class="card-body">
@@ -250,6 +250,13 @@
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    <?php if($_GET['login_error'] == true) { ?>
+        $(document).ready(function() {
+            alert("Login gagal. mohon cek username dan password");
+        });
+    <?php } ?>
+</script>
 
 </body>
 </html>

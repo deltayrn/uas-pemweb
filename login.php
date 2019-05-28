@@ -21,12 +21,12 @@
             $_SESSION['is_login'] = true;
             $_SESSION['username'] = $row['login'];
             $_SESSION['fullname'] = $row['name'];
-            header("location: index.php");
+            header("location: personal.php");
         }else {
             $error = "Your Login Name or Password is invalid";
-            header("location: index.php");
+            header("location: index.php?login_error=true");
         }
     } else {
-        header("location: index.php");
+        header("location: index.php?login_error=true");
     }
 ?>

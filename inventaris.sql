@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2019 at 12:10 AM
+-- Generation Time: May 29, 2019 at 12:43 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -88,8 +88,8 @@ INSERT INTO `pemilik` (`id_pemilik`, `nama_pemilik`, `alamat_pemilik`, `no_hp`) 
 (4, 'Pemda Karangmalang', 'Karangmalang', '08123938633'),
 (5, 'Angelia Paragon', 'Sleman', '08767898292'),
 (6, 'Jenny Jennifer', 'Bantul', '082927263537'),
-(7, '', ' ', ''),
-(8, 'lelaa', ' Bantul', '01981817171');
+(8, 'lelaa', ' Bantul', '01981817171'),
+(9, 'Annisa Tjokro', 'Yogyakarta', '08172826272');
 
 -- --------------------------------------------------------
 
@@ -117,7 +117,13 @@ INSERT INTO `property` (`id_property`, `id_jenis`, `id_pemilik`, `nama_property`
 (6, 1, 2, 'Stadion Sepakbola', NULL),
 (7, 1, 2, 'Gedung IDB Fakultas Teknik', NULL),
 (8, 1, 5, 'Kos Paragon', NULL),
-(9, 1, 6, 'Dixie Cafe', NULL);
+(9, 1, 6, 'Dixie Cafe', NULL),
+(13, 2, 5, 'Mobil Avanza', NULL),
+(14, 2, 1, 'Motor Honda Beat', NULL),
+(15, 2, 2, 'Rp 450.000.000', NULL),
+(17, 2, 4, 'Rp 75.0000', ' '),
+(18, 1, 9, 'Hotel Gran Tjokro', NULL),
+(19, 2, 9, 'Truck Hino', NULL);
 
 --
 -- Indexes for dumped tables
@@ -169,13 +175,13 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `pemilik`
 --
 ALTER TABLE `pemilik`
-  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_pemilik` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `property`
 --
 ALTER TABLE `property`
-  MODIFY `id_property` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_property` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

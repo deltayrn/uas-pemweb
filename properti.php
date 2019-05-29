@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Informasi | Personal property</title>
+    <title>Informasi | Real property</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 
 <body data-spy="scroll" data-target="#navbarResponsive">
 
@@ -23,16 +24,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html#home">Home</a>
+                    <a class="nav-link" href="./index.php#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="./index.html#informasi">Informasi</a>
+                    <a class="nav-link active" href="./index.php#informasi">Informasi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./index.html#about">About</a>
+                    <a class="nav-link" href="./index.php#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.html#contact">Contact</a>
+                    <a class="nav-link" href="/index.php#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -44,6 +45,7 @@
             <div class="col-12 text-center">
                 <h2 class="heading">Real Property</h2>
                 <div class="heading-underline"></div>
+                <p class="jumbotron-caption">Real Properti adalah hak perseorangan atau badan untuk memiliki, dalam arti menguasai tanah dengan suatu hak atas tanah, misalnya hak milik atau hak guna bangunan berikut pengembangan yang melekat padanya. Misalnya tanah, bangunan dan saran pelengkapnya</p>
             </div>
             <div class="row">
                 <div class="box">
@@ -51,9 +53,10 @@
                         <hr>
                 <div class="demo-html"></div>
                 <br>
-                <table id="example" class="display" cellspacing="0" width="100%">
+                <div class="table-responsive">
+                <table class="table table-hover" cellspacing="0" width="100%">
                     <?php if ($_SESSION['is_login']) { ?>
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                         <tr>
                                     <th>Nama Properti</th>
@@ -138,9 +141,10 @@
                     </tbody>
                     <?php } ?>
                 </table>
-                    </div>
                 </div>
-            </div>       
+            </div>
+        </div>
+    </div>       
 </div>
         <!--- End Personal property Section -->
         <!--- Start Contact Section-->

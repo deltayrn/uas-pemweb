@@ -8,6 +8,7 @@
     <title>Informasi | Personal property</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css"> 
+    
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
 
@@ -21,16 +22,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                            <a class="nav-link" href ="./index.html#home">Home</a>
+                            <a class="nav-link" href ="./index.php#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href ="./index.html#informasi">Informasi</a>
+                            <a class="nav-link active" href ="./index.php#informasi">Informasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href ="./index.html#about">About</a>
+                            <a class="nav-link" href ="./index.php#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href ="/index.html#contact">Contact</a>
+                            <a class="nav-link" href ="/index.php#contact">Contact</a>
                         </li>
             </ul>
         </div>
@@ -42,6 +43,7 @@
             <div class="col-12 text-center">
                 <h2 class="heading">personal property</h2>
                 <div class="heading-underline"></div>
+                <p class="jumbotron-caption">Personal properti meliputi kepemilikan pada benda berwujud atau tidak berwujud yang bukan merupakan real estat. Benda-benda ini tidak secara permanen menjadi satu kesatuan dengan real estat dan secara umum memiliki sifat dapat dipindahkan.</p>
             </div>
             <div class="row">
                 <div class="box">
@@ -49,9 +51,10 @@
                         <hr>
                 <div class="demo-html"></div>
                 <br>
-                <table id="example" class="display" cellspacing="0" width="100%">
+                <div class="table-responsive">
+                <table class="table table-hover" cellspacing="0" width="100%">
                     <?php if ($_SESSION['is_login']) { ?>
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                         <tr>
                                     <th>Nama Properti</th>
@@ -136,9 +139,10 @@
                     </tbody>
                     <?php } ?>
                 </table>
-                    </div>
                 </div>
-            </div>       
+             </div>
+        </div>
+    </div>       
 </div>
 <!--- End Personal property Section -->
 <!--- Start Contact Section-->

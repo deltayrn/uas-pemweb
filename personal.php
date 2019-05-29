@@ -45,104 +45,55 @@
                 <div class="heading-underline"></div>
                 <p class="jumbotron-caption">Personal properti meliputi kepemilikan pada benda berwujud atau tidak berwujud yang bukan merupakan real estat. Benda-benda ini tidak secara permanen menjadi satu kesatuan dengan real estat dan secara umum memiliki sifat dapat dipindahkan.</p>
             </div>
+            <div class="container">
             <div class="row">
-                <div class="box">
-                    <div class="col-lg-12">
-                        <hr>
-                <div class="demo-html"></div>
-                <br>
-                <div class="table-responsive">
-                <table class="table table-hover" cellspacing="0" width="100%">
-                    <?php if ($_SESSION['is_login']) { ?>
-                    <thead class="thead-dark">
-                        <tr>
-                        <tr>
-                                    <th>Nama Properti</th>
-                                    <th>Jenis Properti </th>
-                                    <th>Nama Pemilik</th>
-                                    <th>Gambar</th>
-                                    <th colspan="2"> Action </th>
-                        </tr>
-                    <tbody>
+                <?php
+                $sql = "SELECT * FROM property p JOIN jenis j ON j.`id_jenis` = p.`id_jenis` JOIN pemilik pm ON p.`id_pemilik` = pm.`id_pemilik` WHERE j.`id_jenis` = 2";
+                $result = $conn->query($sql);
+                ?>
+                <div class="card-group">
                     <?php
-                                    $sql = "
-                                        SELECT
-                                            *
-                                        FROM
-                                            property p
-                                            JOIN jenis j
-                                            ON j.`id_jenis` = p.`id_jenis`
-                                            JOIN pemilik pm
-                                            ON p.`id_pemilik` = pm.`id_pemilik`
-                                        WHERE j.`id_jenis` = 2
-                                    ";
-                                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            ?>
+                            <div class="col-md-4">
+                                <div class="card" style="margin-bottom:1em;">
+                                    <img class="card-img-top" src="<?php echo $row['img']; ?>">
 
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['nama_property']."</td>";
-                                            echo "<td>".$row['nama_jenis']."</td>";
-                                            echo "<td>".$row['nama_pemilik']."</td>";
-                                            echo "<td><img src='".$row['img']."' alt='img' style='height:50px' /></td>";
-                                            echo "<td>";
-                                            echo "<a href='edit_properti.php?id_property=".$row['id_property']."'>Edit</a> | ";
-                                            echo "<a href='hapus_properti.php?id_property=".$row['id_property']."'>Hapus</a>";
-                                            echo "</tr>";
-                                        }
-                                    } 
-                                ?>
-                            <table >
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $row['nama_property']; ?></h5>
+                                        <p class="small text-muted"><?php echo $row['nama_jenis']; ?></p>
+                                        <p class="small"><?php echo $row['nama_pemilik']; ?></p>
+
+                                        
+                                    </div>
+                                    <?php
+                                        if ($_SESSION['is_login']) {
+                                            ?>
+                                            <div class="card-footer">
+                                            <div class="text-right">
+                                                <button class="btn btn-primary">Edit</button>
+                                                <button class="btn btn-danger">Delete</button>
+                                            </div>
+                                            </div>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                }
+                ?>
+
+
+                </div>
+                <table >
                                 <tr>
                                     <td><a href="aksi_tambah_properti.php"> <button type="submit">Tambah Properti</button> </td> 
                                 </tr>
                             </table>
-                      
-                    </thead>
-                    </tbody>
-                    <?php } else { ?>
-                    <thead>
-                    <tr>
-                        <th>Nama Properti</th>
-                        <th>Jenis Properti </th>
-                        <th>Nama Pemilik</th>
-                        <th>Gambar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php
-                                    $sql = "
-                                        SELECT
-                                            *
-                                        FROM
-                                            property p
-                                            JOIN jenis j
-                                            ON j.`id_jenis` = p.`id_jenis`
-                                            JOIN pemilik pm
-                                            ON p.`id_pemilik` = pm.`id_pemilik`
-                                        WHERE j.`id_jenis` = 2
-                                    ";
-                                    $result = $conn->query($sql);
-
-                                    if ($result->num_rows > 0) {
-                                        while($row = $result->fetch_assoc()) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['nama_property']."</td>";
-                                            echo "<td>".$row['nama_jenis']."</td>";
-                                            echo "<td>".$row['nama_pemilik']."</td>";
-                                            echo "<td><img src='".$row['img']."' alt='img' style='height:50px' /></td>";
-                                            echo "<td>";
-                                            echo "</tr>";
-                                        }
-                                    } 
-                                ?>
-                    </tbody>
-                    <?php } ?>
-                </table>
-                </div>
-             </div>
-        </div>
-    </div>       
+            </div>
 </div>
 <!--- End Personal property Section -->
 <!--- Start Contact Section-->

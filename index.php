@@ -1,3 +1,4 @@
+<?php session_start(); if(!isset($_SESSION['is_login'])) {$_SESSION['is_login'] = false;} include_once('config.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,6 @@
     
 </head>
 <body data-spy="scroll" data-target="#navbarResponsive">
-<?php session_start() ?>
 <!--- Start Home Section-->
 <div id="home">
 
@@ -35,6 +35,14 @@
             <li class="nav-item">
                 <a class="nav-link" href ="#contact">Contact</a>
             </li>
+            </li>
+                <?php if ($_SESSION['is_login']) { ?>
+                    <li>
+                        <li><a href="logout.php">Logout</a></li>
+                    </li>
+                    <?php } else { ?>
+                        <li><a href="#exampleModal" onclick="showmodal()">U:admin P:admin1</a></li>
+                    <?php } ?>
         </ul>
 
     </div>
@@ -119,8 +127,8 @@
 <!--- Start login Section -->
 <div id="course" class="offset">
         <div class="col-12 narrow text-center">
-            <h1>INFORMASI ASET</h1>
-            <p class="lead">Login untuk melihat data aset daerah Karangmalang</p>
+            <h1>KELOLA ASET</h1>
+            <p class="lead">Login untuk mengelola data aset daerah Karangmalang</p>
             <!-- Button trigger modal -->
                 <button type="button" class="btn btn-secondary btn-md" data-toggle="modal" data-target="#exampleModal">
                     LOGIN
